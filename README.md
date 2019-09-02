@@ -22,7 +22,7 @@
 
 ![](https://github.com/AlperenSarinay/Jotform-Test-Project/blob/master/Ul-sketches/Open.png)
 
--> Then enter "node textCrawler.js" to terminal and finish.
+-> Then enter "node Test-Project.js" to terminal and finish.
 
 ![](https://github.com/AlperenSarinay/Jotform-Test-Project/blob/master/Ul-sketches/Start.png)
 
