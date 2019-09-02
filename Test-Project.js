@@ -15,8 +15,8 @@ var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
         'Accept-Language': 'bn'
     });
     await page.goto('https://www.jotform.com/login/', { waitUntil: 'load', timeout: 0 });
-    await page.evaluate(() => document.getElementById('username').value = "alperensarinay@gmail.com"); // jotform username
-    await page.evaluate(() => document.getElementById('password').value = "05323310837"); // Jotform password
+    await page.evaluate(() => document.getElementById('username').value = ""); // jotform username
+    await page.evaluate(() => document.getElementById('password').value = ""); // Jotform password
     await page.evaluate(() => document.getElementById('loginButton').click());
     await page.waitFor(1000);
 
