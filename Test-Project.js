@@ -63,7 +63,9 @@ var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
     selectorThemes = ("[class*=item-thumb]"); // selected class for canvas drawing
 
-    for (var n = 1; n < pageUrlThemes.length; n++) {
+    var Page = ['https://www.jotform.com/theme-store/collection/vintage', 'https://www.jotform.com/theme-store/collection/no_label', 'https://www.jotform.com/theme-store/collection/recent']; // demoDay link
+
+    for (var n = 32; n < pageUrlThemes.length; n++) {
         // links to click in the category
         const linkHandler1 = await page.$x('//*[@id="dLabel"]');
         await linkHandler1[0].click();
@@ -80,6 +82,13 @@ var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
                 await page.screenshot({ path: p });
                 await removeCanvas(page, 'canvas', 0);
             }
+            if (a == 20 && n == 0) {
+                await drawCanvas(page, selectorThemes, a - 1, flagThemes);
+                await page.waitFor(500);
+                await page.screenshot({ path: p });
+                await removeCanvas(page, 'canvas', 0);
+            }
+
         }
     }
 
@@ -154,7 +163,6 @@ var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
         await page.goto(pageurlUserGuide, { waitUntil: 'load', timeout: 0 });
 
     }
-
 
     //BLog page 
 
