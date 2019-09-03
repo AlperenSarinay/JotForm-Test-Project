@@ -63,9 +63,8 @@ var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
     selectorThemes = ("[class*=item-thumb]"); // selected class for canvas drawing
 
-    var Page = ['https://www.jotform.com/theme-store/collection/vintage', 'https://www.jotform.com/theme-store/collection/no_label', 'https://www.jotform.com/theme-store/collection/recent']; // demoDay link
-
-    for (var n = 32; n < pageUrlThemes.length; n++) {
+    
+    for (var n = 1; n < pageUrlThemes.length; n++) {
         // links to click in the category
         const linkHandler1 = await page.$x('//*[@id="dLabel"]');
         await linkHandler1[0].click();
